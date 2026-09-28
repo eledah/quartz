@@ -94,7 +94,7 @@ jobs:
 
       - name: Create issue for merge conflict
         if: steps.merge.outputs.merge_failed == 'true'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           CONFLICT_FILES: ${{ steps.merge.outputs.conflict_files }}
         with:
